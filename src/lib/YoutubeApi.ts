@@ -25,7 +25,7 @@ export interface YouTubeApiResponse {
 export async function fetchChannelVideos(
   channelId: string, 
   pageToken?: string,
-  maxResults: number = 6
+  maxResults: number = 9
 ): Promise<YouTubeApiResponse> {
   try {
     // Build query parameters
