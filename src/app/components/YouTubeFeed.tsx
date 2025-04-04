@@ -297,7 +297,7 @@ const YouTubeFeed: React.FC<YouTubeFeedProps> = ({ channelId }) => {
 
   // Function to render skeleton loaders
   const renderSkeletons = () => {
-    return Array(6).fill(0).map((_, index) => (
+    return Array(9).fill(0).map((_, index) => (
       <VideoCardSkeleton key={`skeleton-${index}`} />
     ));
   };
@@ -358,7 +358,7 @@ const YouTubeFeed: React.FC<YouTubeFeedProps> = ({ channelId }) => {
                     Loading...
                   </span>
                 ) : (
-                  'Indlæs flere videoer'
+                  'Load more videos'
                 )}
               </button>
             ) : (
