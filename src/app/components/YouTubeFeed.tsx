@@ -55,7 +55,7 @@ const VideoCard: React.FC<ExtendedVideoProps> = ({
     if (diffDays < 1) return 'Today';
     if (diffDays === 1) return 'yesterday';
     if (diffDays < 7) return `${diffDays} days ago`;
-    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago..`;
     if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
     return `${Math.floor(diffDays / 365)} år siden`;
   };
