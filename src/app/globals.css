@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+/* Import modern font */
+
+:root {
+  --background: #f8f9fa; /* Lighter background */
+  --foreground: #171717;
+  --card-bg: #ffffff;
+  --card-hover-bg: #ffffff;
+  --card-border: #f0f0f0;
+  --title-color: #111827; /* Slightly darker title for better readability */
+  --primary-color: #3b82f6; /* Blue primary color */
+  --secondary-color: #8b5cf6; /* Purple secondary color */
+  --transition-speed: 0.3s; /* Slightly slower transitions for smoother effects */
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1); /* Modern timing function */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark-mode {
+  --background: #0f172a; /* Deeper dark background for contrast */
+  --foreground: #f1f5f9;
+  --card-bg: #1e293b; /* Slightly blue-ish dark card */
+  --card-hover-bg: #334155; /* Lighter on hover */
+  --card-border: #334155;
+  --title-color: #f1f5f9; /* Light title in dark mode */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  transition: background-color var(--transition-speed) var(--transition-timing),
+              color var(--transition-speed) var(--transition-timing);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern card styling */
+.bg-white {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: transform var(--transition-speed) var(--transition-timing),
+              box-shadow var(--transition-speed) var(--transition-timing),
+              background-color var(--transition-speed) var(--transition-timing);
+}
+
+.dark .bg-white {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+/* Modern shadow effects */
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.dark .shadow-lg,
+.dark .hover\:shadow-xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient text for headings */
+.bg-gradient-to-r {
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+/* Modern image hover effects */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: var(--transition-timing);
+  transition-duration: var(--transition-speed);
+}
+
+.group:hover .group-hover\:scale-105,
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.03);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+.hover\:shadow-orange-500:hover {
+  box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.4), 
+              0 8px 10px -6px rgba(249, 115, 22, 0.3), 
+              0 0 0 1px rgba(249, 115, 22, 0.2);
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Enhanced hover effects */
+.group {
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.7s ease-in-out;
+  will-change: transform, box-shadow, border-color;
+}
+
+.group:hover {
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3), 0 5px 15px rgba(249, 115, 22, 0.2);
+  border-color: #f97316;
+}
+
+.dark .group:hover {
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4), 0 5px 15px rgba(249, 115, 22, 0.3);
+  border-color: #f97316;
+}
+
+/* Smooth transitions */
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+/* Button styling */
+button {
+  transition: all var(--transition-speed) var(--transition-timing);
+}
+
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+}
+
+/* Override line-clamp specific behavior */
+.line-clamp-2 {
+  color: var(--title-color);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Animation for skeleton loading */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .grid {
+    gap: 16px !important;
+  }
+  
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Smooth focus styles */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Improved button focus state */
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary-color);
+}
+
+/* Smooth transitions for interactive elements */
+a, button, input, select, textarea {
+  transition: all var(--transition-speed) var(--transition-timing);
+}
