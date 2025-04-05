@@ -119,16 +119,16 @@ const Header = () => {
         <nav className="w-full flex justify-center">
           <ul className="flex space-x-6">
             <li>
-            <button 
-              onClick={getNewRandomVideo} 
-              className={`py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
-                ${isDarkMode 
-                  ? 'bg-orange-500 hover:bg-orange-600 text-white' 
-                  : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
-                }`}
-            >
-              Random Video
-            </button>
+              <button 
+                onClick={getNewRandomVideo} 
+                className={`py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
+                  ${isDarkMode 
+                    ? 'bg-orange-500 hover:bg-orange-600 text-white' 
+                    : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
+                  }`}
+              >
+                Random Video
+              </button>
             </li>
           </ul>
         </nav>
