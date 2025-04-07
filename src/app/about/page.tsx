@@ -41,7 +41,7 @@ export default function About() {
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-b ">
       <div className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-24">

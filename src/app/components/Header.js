@@ -117,11 +117,11 @@ const Header = () => {
         
         {/* Navigation menu */}
         <nav className="w-full flex justify-center">
-          <ul className="flex space-x-6">
+          <ul className="flex flex-wrap justify-center space-x-2 md:space-x-6">
             <li>
               <Link 
                 href="/" 
-                className={`inline-block py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
+                className={`inline-block py-1.5 px-3 md:py-2 md:px-4 rounded-lg text-base md:text-lg font-medium transition-colors duration-200 cursor-pointer
                   ${isDarkMode 
                     ? 'bg-orange-500 hover:bg-orange-600 text-white' 
                     : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
@@ -133,7 +133,7 @@ const Header = () => {
             <li>
               <button 
                 onClick={getNewRandomVideo} 
-                className={`py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
+                className={`py-1.5 px-3 md:py-2 md:px-4 rounded-lg text-base md:text-lg font-medium transition-colors duration-200 cursor-pointer
                   ${isDarkMode 
                     ? 'bg-orange-500 hover:bg-orange-600 text-white' 
                     : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
@@ -145,7 +145,7 @@ const Header = () => {
             <li>
               <Link 
                 href="/about" 
-                className={`inline-block py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
+                className={`inline-block py-1.5 px-3 md:py-2 md:px-4 rounded-lg text-base md:text-lg font-medium transition-colors duration-200 cursor-pointer
                   ${isDarkMode 
                     ? 'bg-orange-500 hover:bg-orange-600 text-white' 
                     : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
