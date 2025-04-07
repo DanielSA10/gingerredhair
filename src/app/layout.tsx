@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gingerredhair website",
+  title: "Gingerredhair | Official Ginger Headquarters",
   description: "Ginger Headquarters",
   icons: {
     icon: '/grh-logo.png'

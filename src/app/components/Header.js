@@ -119,6 +119,18 @@ const Header = () => {
         <nav className="w-full flex justify-center">
           <ul className="flex space-x-6">
             <li>
+              <Link 
+                href="/" 
+                className={`inline-block py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
+                  ${isDarkMode 
+                    ? 'bg-orange-500 hover:bg-orange-600 text-white' 
+                    : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
+                  }`}
+              >
+                Forside
+              </Link>
+            </li>
+            <li>
               <button 
                 onClick={getNewRandomVideo} 
                 className={`py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
@@ -129,6 +141,18 @@ const Header = () => {
               >
                 Random Video
               </button>
+            </li>
+            <li>
+              <Link 
+                href="/about" 
+                className={`inline-block py-2 px-4 rounded-lg text-lg font-medium transition-colors duration-200 cursor-pointer
+                  ${isDarkMode 
+                    ? 'bg-orange-500 hover:bg-orange-600 text-white' 
+                    : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
+                  }`}
+              >
+                About Me
+              </Link>
             </li>
           </ul>
         </nav>
