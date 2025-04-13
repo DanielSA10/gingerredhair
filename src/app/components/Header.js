@@ -127,7 +127,7 @@ const Header = () => {
                     : 'bg-orange-100 hover:bg-orange-200 text-orange-800'
                   }`}
               >
-                Forside
+                Home
               </Link>
             </li>
             <li>
